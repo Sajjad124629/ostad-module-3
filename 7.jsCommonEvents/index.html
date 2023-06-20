@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Common Event</title>
+</head>
+<body>
+
+    <img width="800" height="600"  id="image-chnage" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="">
+    <script>
+        const displayCoordinates = (event) =>{
+            const x = event.clientX;
+            const y = event.clientY;
+            alert(`Clicked coordinates: (${x}, ${y})`);
+        }
+
+        const DisplayKeyCode = (event) =>{
+            const key_code = event.keyCode || event.which;
+            alert(`Pressed key code: ${key_code}`);
+        }
+
+        document.addEventListener('click',displayCoordinates)
+        document.addEventListener('keydown',DisplayKeyCode)
+
+        document.getElementById('image-chnage').addEventListener('mouseover',function(){
+            let getImage = document.getElementById('image-chnage');
+            getImage.src = "https://img.freepik.com/free-photo/wide-angle-shot-single-tree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg?w=2000";
+        })
+    </script>
+</body>
+</html>

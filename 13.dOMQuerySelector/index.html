@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .class1 {
+            color: blue;
+        }
+
+        .class2 {
+            color: green;
+        }
+
+        .class3 {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <p id="para1" class="class1">Paragraph 1</p>
+    <p id="para2" class="class2">Paragraph 2</p>
+    <p id="para3" class="class3">Paragraph 3</p>
+    <p id="para4" class="class2">Paragraph 4</p>
+    <br>
+    <button onclick="changeTextColor()">Change Text Color</button>
+
+    <script>
+    function changeTextColor() {
+    var paragraphs = document.querySelectorAll("p.class2");
+
+    paragraphs.forEach(function(paragraph) {
+        paragraph.style.color = "red";
+    });
+}
+    </script>
+</body>
+</html>

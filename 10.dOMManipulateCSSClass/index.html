@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight {
+          background-color: yellow;
+        }
+      </style>
+</head>
+<body>
+    <p id="myParagraph">This is a paragraph.</p>
+    <button onclick="highlightParagraph()">Highlight</button>
+  
+    <script>
+      function highlightParagraph() {
+        var paragraph = document.getElementById("myParagraph");
+        paragraph.classList.add("highlight");
+      }
+    </script>
+</body>
+</html>
